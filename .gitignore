@@ -1,0 +1,36 @@
+# Dependências
+node_modules/
+venv/
+.venv/
+
+# Builds
+dist/
+build/
+*.egg-info/
+
+# Ambiente (nunca versionar)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+instance/
+
+# Banco local
+*.db
+*.sqlite
+*.sqlite3
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
