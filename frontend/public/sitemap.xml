@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://exemplo.com/</loc>
+    <loc>https://aguia.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://exemplo.com/sobre</loc>
+    <loc>https://aguia.vercel.app/sobre</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://exemplo.com/contato</loc>
+    <loc>https://aguia.vercel.app/contato</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -5,5 +5,6 @@ Flask-SQLAlchemy==3.1.1
 marshmallow==3.23.2
 python-dotenv==1.0.1
 
-# Desenvolvimento / testes
-pytest==8.3.4
+# Produção: driver do PostgreSQL (Supabase) e servidor WSGI (Render)
+psycopg2-binary==2.9.10
+gunicorn==23.0.0

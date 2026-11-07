@@ -13,7 +13,7 @@ export default function Header() {
     <header className="border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4">
         <Link to="/" className="text-lg font-bold tracking-tight text-brand-600">
-          Meu Site
+          Águia
         </Link>
         <Navbar links={links} />
         <ThemeToggle />

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://exemplo.com/sitemap.xml
+Sitemap: https://aguia.vercel.app/sitemap.xml

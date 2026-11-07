@@ -1,0 +1,23 @@
+# Blueprint do Render: cria a API Flask no plano gratuito.
+# Documentação: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: aguia-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    # Aplica as migrações e sobe o servidor (o plano gratuito não tem pre-deploy).
+    startCommand: flask --app run.py db upgrade && gunicorn run:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false # cole a connection string do Supabase no painel do Render
+      - key: CORS_ORIGINS
+        sync: false # URL do frontend na Vercel, ex.: https://aguia.vercel.app

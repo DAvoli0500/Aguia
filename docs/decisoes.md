@@ -29,3 +29,24 @@ no momento do import.
 
 **Decisão:** Tailwind para utilitários e variáveis CSS em `styles/tokens.css`
 para cores base. Tema escuro via classe `dark` no `<html>`.
+
+**Consequências:** o tema escuro segue a classe `dark`. As cores de marca
+existem em `tailwind.config.js` e em `tokens.css`, e precisam ser mantidas em
+sincronia ao trocar a identidade visual.
+
+---
+
+## 2026-11-06 — Deploy: Vercel + Render + Supabase (plano gratuito)
+
+**Contexto:** o projeto precisa ir ao ar sem custo, mantendo a mesma stack dos
+estudos (React + Vite, Flask, PostgreSQL).
+
+**Decisão:** site estático na Vercel (`frontend/vercel.json`), API com
+`gunicorn` no Render (`render.yaml`) e PostgreSQL no Supabase via
+`DATABASE_URL`. SQLite continua como padrão apenas no desenvolvimento local.
+Dependências de teste ficam em `requirements-dev.txt`.
+
+**Consequências:** a API gratuita "dorme" por inatividade; `postgres://` é
+convertido para `postgresql://` em `config.py`; a `SECRET_KEY` de produção
+precisa ser definida no painel (o Render a gera automaticamente).
+
